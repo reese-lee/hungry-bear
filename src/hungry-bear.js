@@ -43,6 +43,8 @@
 //
 //START OF OLD CODE
 //
+// import { Hiker } from './../src/hiker.js';
+
 export class HungryBear {
 
   constructor(name) {
@@ -63,25 +65,25 @@ export class HungryBear {
       return true;
     }
   }
-  // 
-  // feedTheBear(food) {
-  //   if (food === )
-  // }
 
-  feedTrailMix() {
+  feedTrailMix(Hiker) {
     this.foodLevel += 2;
+    Hiker.backpack["trailMix"] -= 1;
   }
 
-  feedGranolaBar() {
+  feedGranolaBar(Hiker) {
     this.foodLevel += 3;
+    Hiker.backpack["granolaBar"] -= 1;
   }
 
-  feedPeanutButterSandwich() {
+  feedPeanutButterSandwich(Hiker) {
     this.foodLevel += 4;
+    Hiker.backpack["peanutButterSandwich"] -= 1;
   }
 
-  feedBodyPart() {
+  feedBodyPart(Hiker) {
     this.foodLevel +=8;
+    Hiker.backpack["bodyParts"] -= 1;
   }
 }
 //
