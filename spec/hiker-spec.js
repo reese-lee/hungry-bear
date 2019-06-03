@@ -14,5 +14,5 @@ describe('Hiker', function() {
     Linda.areYouDead();
     expect(Linda.alive).toEqual(false);
   });
-  
+
 });
