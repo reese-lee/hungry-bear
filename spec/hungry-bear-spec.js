@@ -76,21 +76,44 @@ describe('HungryBear', function() {
     expect(fuzzy.foodLevel).toEqual(7);
   });
 
-  it('should get very hungry if the food level drops below zero', function() {
+  it('should kill the hiker if the food level drops below zero', function() {
     fuzzy.foodLevel = 0;
     expect(fuzzy.didYouGetEaten()).toEqual(true);
   });
 
-  it('should get very hungry if 10 seconds pass without feeding', function() {
+  it('should kill the hiker if 10 seconds pass without feeding', function() {
     jasmine.clock().tick(10001);
     expect(fuzzy.didYouGetEaten()).toEqual(true);
   });
 
-  it('should have a food level of ten if it is fed', function() {
-    jasmine.clock().tick(9001);
-    fuzzy.feed();
-    expect(fuzzy.foodLevel).toEqual(10);
+  it('should have its foodLevel go up by 2 when fed TrailMix', function() {
+    fuzzy.foodLevel = 5;
+    jasmine.clock().tick(7001);
+    fuzzy.feedTrailMix();
+    expect(fuzzy.foodLevel).toEqual(0);
   });
+
+  it('should have its foodLevel go up by 3 when fed a Granola Bar', function() {
+    fuzzy.foodLevel = 8;
+    jasmine.clock().tick(7001);
+    fuzzy.feedGranolaBar();
+    expect(fuzzy.foodLevel).toEqual(4);
+  });
+
+  it('should have its foodLevel go up by 4 when fed a Peanut Butter Sandwich', function() {
+    fuzzy.foodLevel = 2;
+    jasmine.clock().tick(3001);
+    fuzzy.feedGranolaBar();
+    expect(fuzzy.foodLevel).toEqual(2);
+  });
+
+  it('should have its foodLevel go up by 8 when fed a Body Part', function() {
+    fuzzy.foodLevel = 1;
+    jasmine.clock().tick(6001);
+    fuzzy.feedBodyPart();
+    expect(fuzzy.foodLevel).toEqual(3);
+  });
+
 });
 //
 //END OF OLD CODE
