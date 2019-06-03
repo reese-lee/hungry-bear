@@ -63,9 +63,25 @@ export class HungryBear {
       return true;
     }
   }
+  // 
+  // feedTheBear(food) {
+  //   if (food === )
+  // }
 
-  feed() {
-    this.foodLevel = 10;
+  feedTrailMix() {
+    this.foodLevel += 2;
+  }
+
+  feedGranolaBar() {
+    this.foodLevel += 3;
+  }
+
+  feedPeanutButterSandwich() {
+    this.foodLevel += 4;
+  }
+
+  feedBodyPart() {
+    this.foodLevel +=8;
   }
 }
 //
