@@ -97,7 +97,6 @@ describe('HungryBear', function() {
 
   it('should have its Trail Mix amount reduced by 1 when feeding a Trail Mix', function() {
     let hiker = new Hiker("Linda");
-    // jasmine.clock().tick(7001);
     fuzzy.feedTrailMix(hiker);
     expect(hiker.backpack["trailMix"]).toEqual(4);
   });
@@ -112,7 +111,6 @@ describe('HungryBear', function() {
 
   it('should have its Granola Bar amount reduced by 1 when feeding a Granola Bar', function() {
     let hiker = new Hiker("Linda");
-    // jasmine.clock().tick(7001);
     fuzzy.feedGranolaBar(hiker);
     expect(hiker.backpack["granolaBar"]).toEqual(2);
   });
@@ -127,12 +125,11 @@ describe('HungryBear', function() {
 
   it('should have its Peanut Butter Sandwich amount reduced by 1 when feeding a Peanut Butter Sandwich', function() {
     let hiker = new Hiker("Linda");
-    // jasmine.clock().tick(7001);
     fuzzy.feedPeanutButterSandwich(hiker);
     expect(hiker.backpack["peanutButterSandwich"]).toEqual(2);
   });
 
-  it('should have its foodLevel go up by 8 when fed a Body Part', function() {
+  it('should have its foodLevel go up by 4 when fed a Body Part', function() {
     let hiker = new Hiker("Linda");
     fuzzy.foodLevel = 1;
     jasmine.clock().tick(6001);
@@ -142,7 +139,6 @@ describe('HungryBear', function() {
 
   it('should have its body parts amount reduced by 1 when feeding a body part', function() {
     let hiker = new Hiker("Linda");
-    // jasmine.clock().tick(7001);
     fuzzy.feedBodyPart(hiker);
     expect(hiker.backpack["bodyParts"]).toEqual(3);
   });
