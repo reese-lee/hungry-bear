@@ -11,7 +11,7 @@
 
 ## Installation and Setup
 * If you don't have it installed, download and install Node.js 12.3.1
-* `$ git clone https://github.com/YourGitHubNameHere/YourGitHubRepositoryNameHere.git` This will clone the repository to your local machine.
+* `$ git clone https://github.com/MarcLignarius/HungryBear.git` This will clone the repository to your local machine.
 * `$ npm install` This will allow you to have access to the CLI (command line interface) for webpack.
 * `$ npm run build`
 This will automatically build the bundle once. The entry file is `./src/script/index.js`, with production ready code (minified).
