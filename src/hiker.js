@@ -6,7 +6,7 @@ export class Hiker {
     this.name = name;
     this.alive = true;
     this.backpack =
-    {"trailMix": 5 , "granolaBar": 3, "peanutButterSandwich": 3, "bodyParts": 4};
+    {"trailMix": 5 , "granolaBar": 3, "peanutButterSandwich": 3, "bodyParts": 4, "shotgun": 5};
   }
 
   trailMixAmount() {
@@ -16,6 +16,7 @@ export class Hiker {
       trailMixButton.disabled = true;
     }
   }
+
   granolaBarAmount(){
     var granolaBarButton = document.getElementById("granolaBarButton");
     granolaBarButton.disabled = false;
@@ -23,6 +24,7 @@ export class Hiker {
       granolaBarButton.disabled = true;
     }
   }
+
   peanutButterSandwichAmount() {
     var peanutButterSandwichButton = document.getElementById("peanutButterSandwichButton");
     peanutButterSandwichButton.disabled = false;
@@ -30,11 +32,20 @@ export class Hiker {
       peanutButterSandwichButton.disabled = true;
     }
   }
+
   bodyPartAmount() {
     var bodyPartButton = document.getElementById("bodyPartButton");
     bodyPartButton.disabled = false;
     if(this.backpack["bodyParts"] === 1) {
       bodyPartButton.disabled = true;
+    }
+  }
+
+  shotgunAmount() {
+    var shotgunButton = document.getElementById("shotgunButton");
+    shotgunButton.disabled = false;
+    if(this.backpack["shotgun"] === 1) {
+      shotgunButton.disabled = true;
     }
   }
 
