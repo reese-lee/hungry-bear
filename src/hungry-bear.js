@@ -2,7 +2,7 @@ export class HungryBear {
 
   constructor(name) {
     this.name = name;
-    this.foodLevel = 10;
+    this.foodLevel = 5;
   }
 
   setHunger() {
