@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -6,52 +7,56 @@
 </head>
 <body>
   <div class="container">
-    <h1>Hungry Bear</h1>
-      <form class="hiker-name" action="index.html" method="post">
-        <label for="submit">Name</label>
-        <input type="text" class="name" name="name">
-        <button type="submit" name="button">Submit</button>
-      </form>
+    <h1 style="text-align:center">Feed the bear or face certain death!</h1>
+    <!-- <h1>Hungry Bear</h1>
+    <form class="hiker-name" action="index.html" method="post">
+      <label for="submit">Name</label>
+      <input type="text" class="name" name="name">
+      <button type="submit" name="button">Submit</button>
+    </form> -->
 
-      <h1><span class="dead"></span></h1>
-
-      <div class="bear">
-        <div class="row">
-          <div class="col-lg-6">
-            <h2>Hunger Level: <span id="hunger"></span></h2>
-          </div>
-          <div class="col-lg-6">
-            <img id="cuteBear" alt="a cute bear">
-          </div>
+    <h1><span class="dead"></span></h1>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="bear">
+          <img id="cuteBear" class="center" alt="a cute bear">
+          <h3 style="text-align: center">Satisfaction Level: <span id="hunger"></span></h3>
         </div>
       </div>
 
-      <div class="hiker">
-        <img id="hiker" alt="hiker">
-        <h2>Trail Mix: <span id="trailMix"></span></h2>
-        <h2>Granola Bar: <span id="granolaBar"></span></h2>
-        <h2>Peanut butter sandwich: <span id="pbSandwich"></span></h2>
-        <h2>Body part: <span id="bodyPart"></span></h2>
+      <div class="col-md-4">
+        <div id="space">
+        </div>
+        <div class="buttons" style="text-align: center">
+          <br>
+          <button class="btn btn-dark" name="trailMix" id="trailMixButton">
+            <label for="trailMix">Feed trail mix</label>
+          </button><br>
+          <button class="btn btn-dark" name="granolaBar" id="granolaBarButton">
+            <label for="granolaBar">Feed granola bar</label>
+          </button><br>
+          <button class="btn btn-dark" name="peanutButterSandwich" id="peanutButterSandwichButton">
+            <label for="peanutButterSandwich">Feed sandwich</label>
+          </button><br>
+          <button class="btn btn-dark" name="bodyPart" id="bodyPartButton">
+            <label for="bodyPart">Feed body part</label>
+          </button>
+        </div>
       </div>
 
-      <div class="buttons">
-        <button class="btn" name="trailMix">
-          <label for="trailMix">Trail mix!</label>
-        </button>
-        <br>
-        <button class="btn" name="granolaBar">
-          <label for="granolaBar">Granola bar!</label>
-        </button>
-        <br>
-        <button class="btn" name="peanutButterSandwich">
-          <label for="peanutButterSandwich">Peanut butter sandwich!</label>
-        </button>
-        <br>
-        <button class="btn" name="bodyPart">
-          <label for="bodyPart">Body part!</label>
-        </button>
+        <div class="col-md-4">
+          <div class="hiker">
+            <img id="hiker" class="center" alt="hikers">
+            <h3 style="text-align: center">Trail Mix: <span id="trailMix"></span></h3>
+            <h3 style="text-align: center">Granola Bar: <span id="granolaBar"></span></h3>
+            <h3 style="text-align: center">Peanut butter sandwich: <span id="peanutButterSandwich"></span></h3>
+            <h3 style="text-align: center">Body part: <span id="bodyPart"></span></h3>
+          </div>
+        </div>
 
-      </div>
+
+    </div>
+
   </div>
 </body>
 </html>
