@@ -2,7 +2,8 @@ export class HungryBear {
 
   constructor(name) {
     this.name = name;
-    this.foodLevel = 5;
+    this.health = 100;
+    this.foodLevel = 10;
   }
 
   setHunger() {
@@ -11,12 +12,26 @@ export class HungryBear {
     }, 1000);
   }
 
+  didYouKillBear() {
+    if (this.health <= 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   didYouGetEaten() {
     if (this.foodLevel > 0) {
       return false;
     } else {
       return true;
     }
+  }
+
+  shootBear(Hiker) {
+    var healthLost = Math.floor(Math.random() * Math.floor(50));
+    this.health -= healthLost;
+    Hiker.backpack["shotgun"] -=1;
   }
 
   feedTrailMix(Hiker) {
