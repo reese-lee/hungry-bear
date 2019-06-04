@@ -24,28 +24,30 @@ $(document).ready(function() {
 
   $("#trailMix").text(hiker.backpack["trailMix"]);
   $("#trailMixButton").click(function() {
-    $("#trailMix").text(hiker.backpack["trailMix"]);
-    hiker.foodAmount();
+    hiker.trailMixAmount();
     hungryBear.feedTrailMix(hiker);
-    console.log(hiker.backpack["trailMix"]);
+    $("#trailMix").text(hiker.backpack["trailMix"]);
   });
 
   $("#granolaBar").text(hiker.backpack["granolaBar"]);
   $("#granolaBarButton").click(function() {
-    $("#granolaBar").text(hiker.backpack["granolaBar"]);
+    hiker.granolaBarAmount();
     hungryBear.feedGranolaBar(hiker);
+    $("#granolaBar").text(hiker.backpack["granolaBar"]);
   });
 
   $("#peanutButterSandwich").text(hiker.backpack["peanutButterSandwich"]);
   $("#peanutButterSandwichButton").click(function() {
-    $("#peanutButterSandwich").text(hiker.backpack["peanutButterSandwich"]);
+    hiker.peanutButterSandwichAmount();
     hungryBear.feedPeanutButterSandwich(hiker);
+    $("#peanutButterSandwich").text(hiker.backpack["peanutButterSandwich"]);
   });
 
   $("#bodyPart").text(hiker.backpack["bodyParts"]);
   $("#bodyPartButton").click(function() {
-    $("#bodyPart").text(hiker.backpack["bodyParts"]);
+    hiker.bodyPartAmount();
     hungryBear.feedBodyPart(hiker);
+    $("#bodyPart").text(hiker.backpack["bodyParts"]);
   });
 
 
