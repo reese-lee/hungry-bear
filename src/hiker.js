@@ -9,11 +9,32 @@ export class Hiker {
     {"trailMix": 5 , "granolaBar": 3, "peanutButterSandwich": 3, "bodyParts": 4};
   }
 
-  foodAmount() {
+  trailMixAmount() {
     var trailMixButton = document.getElementById("trailMixButton");
     trailMixButton.disabled = false;
-    if(this.backpack["trailMix"] === 0) {
+    if(this.backpack["trailMix"] === 1) {
       trailMixButton.disabled = true;
+    }
+  }
+  granolaBarAmount(){
+    var granolaBarButton = document.getElementById("granolaBarButton");
+    granolaBarButton.disabled = false;
+    if(this.backpack["granolaBar"] === 1) {
+      granolaBarButton.disabled = true;
+    }
+  }
+  peanutButterSandwichAmount() {
+    var peanutButterSandwichButton = document.getElementById("peanutButterSandwichButton");
+    peanutButterSandwichButton.disabled = false;
+    if(this.backpack["peanutButterSandwich"] === 1) {
+      peanutButterSandwichButton.disabled = true;
+    }
+  }
+  bodyPartAmount() {
+    var bodyPartButton = document.getElementById("bodyPartButton");
+    bodyPartButton.disabled = false;
+    if(this.backpack["bodyParts"] === 1) {
+      bodyPartButton.disabled = true;
     }
   }
 
