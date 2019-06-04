@@ -7,31 +7,37 @@
 </head>
 <body>
   <div class="container">
-    <h1 class="mainTitle" style="text-align:center">Feed the bear or face certain death!</h1>
-    <!-- <h1>Hungry Bear</h1>
-    <form class="hiker-name" action="index.html" method="post">
-      <label for="submit">Name</label>
-      <input type="text" class="name" name="name">
-      <button type="submit" name="button">Submit</button>
-    </form> -->
-
-    <div class="dead">
-      <h1>THE BEAR IS STILL HUNGRY! And will now eat you. Thank you.</h1>
+    <div class="mainTitle">
+      <h1 style="text-align:center">BEAR ENCOUNTER</h1>
+      <h3 style="text-align:center">Throw food at the bear to keep it at a distance.</h3>
+      <h3 style="text-align:center">Use your shotgun to wound the bear and scare it away.</h3>
+    </div>
+    <div class="hikerDead">
+      <h1 style="text-align: center">YOU ARE OUT OF AMMO AND FOOD.</h1>
+      <h1 style="text-align: center">You are now bear food. Sorry. Sucks to be you.</h1>
       <img id="angryBear" alt="an angry bear">
+    </div>
+    <div class="bearDead">
+      <h1 style="text-align: center">You have wounded the bear, and it is now retreating.</h1><br>
+      <h1 style="text-align: center">YOU LIVE ANOTHER DAY.</h1>
+      <img id="sadBear" alt="a sad bear">
     </div>
     <div class="row">
       <div class="col-md-4">
         <div class="bear">
-          <img id="cuteBear" class="center" alt="a cute bear">
+          <img id="idleBear" class="center" alt="an idle bear">
+          <h3 style="text-align: center">Health Points: <span id="health"></span></h3>
           <h3 style="text-align: center">Satisfaction Level: <span id="hunger"></span></h3>
         </div>
       </div>
-
       <div class="col-md-4">
         <div id="space">
         </div>
         <div class="buttons" style="text-align: center">
           <br>
+          <button class="btn btn-dark" name="shotgun" id="shotgunButton">
+            <label for="shotgun">Shoot Bear</label>
+          </button><br>
           <button class="btn btn-dark" name="trailMix" id="trailMixButton">
             <label for="trailMix">Feed trail mix</label>
           </button><br>
@@ -46,20 +52,17 @@
           </button>
         </div>
       </div>
-
-        <div class="col-md-4">
-          <div class="hiker">
-            <img id="hiker" class="center" alt="hikers">
-            <h3 style="text-align: center">Trail Mix: <span id="trailMix"></span></h3>
-            <h3 style="text-align: center">Granola Bar: <span id="granolaBar"></span></h3>
-            <h3 style="text-align: center">Peanut butter sandwich: <span id="peanutButterSandwich"></span></h3>
-            <h3 style="text-align: center">Body part: <span id="bodyPart"></span></h3>
-          </div>
+      <div class="col-md-4">
+        <div class="hiker">
+          <img id="hiker" class="center" alt="hikers">
+          <h3 style="text-align: center">Shotgun Ammo: <span id="shotgun"></span></h3>
+          <h3 style="text-align: center">Trail Mix: <span id="trailMix"></span></h3>
+          <h3 style="text-align: center">Granola Bar: <span id="granolaBar"></span></h3>
+          <h3 style="text-align: center">Peanut butter sandwich: <span id="peanutButterSandwich"></span></h3>
+          <h3 style="text-align: center">Body part: <span id="bodyPart"></span></h3>
         </div>
-
-
+      </div>
     </div>
-
   </div>
 </body>
 </html>
