@@ -1,1 +1,18 @@
-/* Styles go here */
+body {
+  background-image: url("https://www.freevector.com/uploads/vector/preview/19038/DD-Forest-Background-67704-Preview.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+img#cuteBear {
+  border-style: solid;
+  border-radius: 15%;
+  border-width: 10px;
+  border-color: black;
+  background: transparent;
+  margin: 5%;
+}
+
+/* #hungryBear {
+
+} */
